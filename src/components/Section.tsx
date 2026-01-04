@@ -1,5 +1,4 @@
 import { cn } from "../lib/utils";
-import { Container } from "./Container";
 
 export function Section({
   title,
@@ -14,7 +13,7 @@ export function Section({
 }) {
   return (
     <section className={cn("py-14", className)}>
-      <Container>
+      <div className="mx-auto max-w-6xl px-4">
         <div className="mb-8">
           <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">
             {title}
@@ -24,7 +23,7 @@ export function Section({
           ) : null}
         </div>
         {children}
-      </Container>
+      </div>
     </section>
   );
 }

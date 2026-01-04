@@ -1,4 +1,9 @@
+/* Tailwind v4: import Tailwind (theme + preflight + utilities). */
 @import "tailwindcss";
+
+/* Safety net: explicitly tell Tailwind where to scan for class names. */
+@source "../**/*.{js,ts,jsx,tsx,mdx}";
+@source "../../**/*.{js,ts,jsx,tsx,mdx}";
 
 :root {
   color-scheme: dark;
@@ -10,10 +15,23 @@ body {
 }
 
 body {
+  margin: 0;
+
+  /* Obvious background so it never feels like "plain HTML" */
   background:
-    radial-gradient(900px circle at 20% 10%, rgba(255,255,255,0.10), transparent 50%),
-    radial-gradient(900px circle at 90% 40%, rgba(255,255,255,0.08), transparent 55%),
+    radial-gradient(1100px circle at 20% 10%, rgba(255, 255, 255, 0.14), transparent 55%),
+    radial-gradient(900px circle at 90% 40%, rgba(255, 255, 255, 0.10), transparent 55%),
+    radial-gradient(700px circle at 50% 95%, rgba(124, 58, 237, 0.18), transparent 60%),
     #000;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 1px;
 }
 
 ::selection {
