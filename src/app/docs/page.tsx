@@ -2,14 +2,14 @@ import Link from "next/link";
 
 const cards = [
   {
+    href: "/download",
+    title: "Download",
+    desc: "Get the latest release (auto-pulled from GitHub Releases).",
+  },
+  {
     href: "/docs/getting-started",
     title: "Getting Started",
     desc: "Prereqs, build scripts, and running in QEMU.",
-  },
-  {
-    href: "/docs/readme",
-    title: "README (Live)",
-    desc: "Rendered directly from the GitHub repo.",
   },
   {
     href: "/roadmap",

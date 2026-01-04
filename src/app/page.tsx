@@ -47,10 +47,10 @@ export default function HomePage() {
               </a>
 
               <Link
-                href="/docs/readme"
+                href="/download"
                 className="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10"
               >
-                Read the README
+                Download latest
               </Link>
             </div>
           </div>
@@ -80,7 +80,7 @@ export default function HomePage() {
           </Link>
 
           <Link
-            href="/docs/readme"
+            href="/download"
             className="rounded-2xl border border-white/10 bg-white/5 p-5 hover:bg-white/10 transition"
           >
             <div className="text-base font-semibold">README (Live)</div>
