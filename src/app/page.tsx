@@ -66,7 +66,7 @@ export default function HomePage() {
 
       <Section
         title="Docs"
-        subtitle="Quickstart, roadmap, and the live README rendered from GitHub."
+        subtitle="Quickstart, download, and roadmap—everything you need to try Othello OS."
       >
         <div className="grid gap-4 md:grid-cols-3">
           <Link
@@ -83,9 +83,9 @@ export default function HomePage() {
             href="/download"
             className="rounded-2xl border border-white/10 bg-white/5 p-5 hover:bg-white/10 transition"
           >
-            <div className="text-base font-semibold">README (Live)</div>
+            <div className="text-base font-semibold">Download</div>
             <p className="mt-2 text-sm text-white/70">
-              Auto-fetched from GitHub and rendered here.
+              Get the latest release (auto-pulled from GitHub Releases).
             </p>
           </Link>
 
