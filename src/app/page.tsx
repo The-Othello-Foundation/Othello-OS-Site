@@ -87,9 +87,9 @@ export default async function HomePage() {
             {/* RIGHT PANEL */}
             <div className="lg:col-span-5">
               <div className="gradient-border">
-                <div className="glass rounded-2xl p-6">
+                <div className="glass rounded-2xl p-6 overflow-hidden">
                   <div className="text-sm font-semibold text-white">At a glance</div>
-                  <p className="mt-2 text-sm text-white/65">
+                  <p className="mt-2 text-sm text-white/65 leading-relaxed break-words max-w-prose">
                     Educational and experimental OS work—from firmware handoff to a graphical desktop—designed to be readable, modular, and hackable.
                   </p>
 
