@@ -36,10 +36,14 @@ export function SiteHeader({ className }: { className?: string }) {
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
         <Link href="/" className="flex items-center gap-3">
-          <div className="grid h-9 w-9 place-items-center rounded-xl border border-white/10 bg-white/5 text-sm font-black text-white">
-            O
-          </div>
-<div className="leading-tight">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/othello.png"
+            alt="Othello OS"
+            className="h-9 w-9 rounded-xl border border-white/10 bg-white/5 object-cover"
+          />
+
+          <div className="leading-tight">
             <div className="text-sm font-semibold text-white">{site.name}</div>
             <div className="text-xs text-white/60">Bare-metal OS</div>
           </div>
@@ -52,7 +56,7 @@ export function SiteHeader({ className }: { className?: string }) {
         <div className="flex items-center gap-2">
           <Link
             href="/download"
-            className="hidden rounded-xl bg-white px-3 py-2 text-sm font-semibold text-black hover:bg-white/90 md:inline-flex"
+            className="hidden rounded-2xl bg-white px-3 py-2 text-sm font-semibold text-black hover:bg-white/90 md:inline-flex"
           >
             Download
           </Link>
@@ -61,7 +65,7 @@ export function SiteHeader({ className }: { className?: string }) {
             href={site.repo.url}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-white hover:bg-white/10"
+            className="inline-flex items-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-white hover:bg-white/10"
           >
             <Github className="h-4 w-4" />
             GitHub
@@ -70,7 +74,7 @@ export function SiteHeader({ className }: { className?: string }) {
 
           {/* Mobile menu without client JS */}
           <details className="relative md:hidden">
-            <summary className="list-none cursor-pointer rounded-xl border border-white/10 bg-white/5 p-2 text-white hover:bg-white/10">
+            <summary className="list-none cursor-pointer rounded-2xl border border-white/10 bg-white/5 p-2 text-white hover:bg-white/10">
               <Menu className="h-5 w-5" />
             </summary>
             <div className="absolute right-0 mt-2 w-56 rounded-2xl border border-white/10 bg-black/80 p-2 shadow-xl backdrop-blur">
@@ -78,7 +82,7 @@ export function SiteHeader({ className }: { className?: string }) {
               <div className="mt-2 border-t border-white/10 pt-2">
                 <Link
                   href="/download"
-                  className="block rounded-xl bg-white px-3 py-2 text-sm font-semibold text-black hover:bg-white/90"
+                  className="block rounded-2xl bg-white px-3 py-2 text-sm font-semibold text-black hover:bg-white/90"
                 >
                   Download
                 </Link>
@@ -87,6 +91,8 @@ export function SiteHeader({ className }: { className?: string }) {
           </details>
         </div>
       </div>
+
+      <div className="h-px w-full bg-gradient-to-r from-transparent via-violet-400/25 to-transparent" />
     </header>
   );
 }

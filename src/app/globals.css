@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* Tailwind v4: ensure scanning picks up classes if tooling is strict */
+/* Tailwind v4: ensure scanning picks up classes (works even if tooling is strict) */
 @source "../**/*.{js,ts,jsx,tsx,mdx}";
 @source "../../**/*.{js,ts,jsx,tsx,mdx}";
 
@@ -15,10 +15,63 @@ html, body {
 body {
   margin: 0;
   background:
-    radial-gradient(1100px circle at 20% 10%, rgba(255,255,255,0.14), transparent 55%),
+    radial-gradient(1100px circle at 20% 10%, rgba(255,255,255,0.16), transparent 55%),
     radial-gradient(900px circle at 90% 40%, rgba(255,255,255,0.10), transparent 55%),
-    radial-gradient(700px circle at 50% 95%, rgba(124,58,237,0.18), transparent 60%),
+    radial-gradient(700px circle at 50% 95%, rgba(124,58,237,0.22), transparent 60%),
     #000;
 }
 
 ::selection { background: rgba(255,255,255,0.18); }
+
+/* Decorative overlays */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(800px circle at 50% 10%, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 70%);
+}
+
+.bg-grid-fade {
+  mask-image: radial-gradient(900px circle at 50% 15%, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 72%);
+}
+
+@keyframes floaty {
+  0%   { transform: translate3d(-50%, 0, 0) scale(1); opacity: .9; }
+  50%  { transform: translate3d(-48%, 18px, 0) scale(1.05); opacity: 1; }
+  100% { transform: translate3d(-50%, 0, 0) scale(1); opacity: .9; }
+}
+
+@keyframes drift {
+  0%   { transform: translate3d(0, 0, 0) scale(1); }
+  50%  { transform: translate3d(-10px, 18px, 0) scale(1.04); }
+  100% { transform: translate3d(0, 0, 0) scale(1); }
+}
+
+.animate-floaty { animation: floaty 12s ease-in-out infinite; }
+.animate-drift  { animation: drift 16s ease-in-out infinite; }
+
+.glass {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,0.06) inset,
+    0 20px 60px rgba(0,0,0,0.35);
+}
+
+.gradient-border {
+  position: relative;
+  border-radius: 1rem;
+}
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.22), rgba(124,58,237,0.25), rgba(255,255,255,0.10));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
