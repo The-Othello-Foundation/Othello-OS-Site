@@ -1,5 +1,5 @@
-import { fetchRepoFile } from "@/lib/github";
-import { Markdown } from "@/components/Markdown";
+import { fetchRepoFile } from "../../../lib/github";
+import { Markdown } from "../../../components/Markdown";
 
 export const dynamic = "force-static";
 

@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+import { cn } from "../lib/utils";
 import { Cpu, Monitor, Network, Shield, Folder, Globe } from "lucide-react";
 
 const features = [

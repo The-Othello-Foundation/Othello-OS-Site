@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { site } from "@/lib/site";
-import { Section } from "@/components/Section";
-import { FeatureGrid } from "@/components/FeatureGrid";
+import { site } from "../lib/site";
+import { Section } from "../components/Section";
+import { FeatureGrid } from "../components/FeatureGrid";
 import { ArrowRight, Github } from "lucide-react";
 
 export default function HomePage() {

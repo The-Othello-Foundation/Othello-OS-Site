@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { site } from "@/lib/site";
-import { cn } from "@/lib/utils";
+import { site } from "../lib/site";
+import { cn } from "../lib/utils";
 import { ArrowUpRight, BookOpen, Github } from "lucide-react";
 
 const nav = [

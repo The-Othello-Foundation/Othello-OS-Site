@@ -1,4 +1,4 @@
-import { site } from "@/lib/site";
+import { site } from "../lib/site";
 
 export async function fetchRepoFile(path: string) {
   const { owner, name, branch } = site.repo;
